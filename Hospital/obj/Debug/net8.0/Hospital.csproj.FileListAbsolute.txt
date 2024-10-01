@@ -134,3 +134,4 @@ D:\asp.net sec\git hosp\Hospital\Hospital\obj\Debug\net8.0\refint\Hospital.dll
 D:\asp.net sec\git hosp\Hospital\Hospital\obj\Debug\net8.0\Hospital.pdb
 D:\asp.net sec\git hosp\Hospital\Hospital\obj\Debug\net8.0\Hospital.genruntimeconfig.cache
 D:\asp.net sec\git hosp\Hospital\Hospital\obj\Debug\net8.0\ref\Hospital.dll
+D:\asp.net sec\git hosp\Hospital\Hospital\obj\Debug\net8.0\Hospital.sourcelink.json
