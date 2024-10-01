@@ -1,0 +1,12 @@
+﻿<h2>Book Appointment</h2>
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 20rem;">
+        <img src="~/images/@item.Img" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@item.Name</h5>
+            <p class="card-text">Specialization: @item.Specialization</p>
+            <a href="/Doctors/CompleteAppointment?id=@item.Id" class="btn btn-primary">Book Appointment</a>
+        </div>
+    </div>
+}

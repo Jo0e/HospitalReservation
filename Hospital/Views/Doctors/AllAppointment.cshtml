@@ -1,0 +1,43 @@
+﻿<h3>All Appointments</h3>
+<br />
+<br />
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 22rem;">
+        <div class="card-body">
+            <h5 class="card-title">Patient Name: @item.PatientName</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Appointment Date: @item.AppointmentDate : @item.AppointmentTime </h6>
+            <p class="card-text">Appointment Id: @item.Id - With: @item.Doctor.Name <br />Specialization: @item.Doctor.Specialization </p>
+
+            @* <a href="/Doctors/RemoveAppointment?id=@item.Id" class="card-link">Delete Appointment</a> *@
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Delete Appointment
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete Appointment</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure want to Delete Appointment?
+                        </div>
+                        <div class="modal-footer" >
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <a href="/Doctors/RemoveAppointment?id=@item.Id" class="btn btn-primary" style="background-color:red; border:none">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>  
+    </div>
+}

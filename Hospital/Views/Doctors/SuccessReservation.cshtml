@@ -1,0 +1,41 @@
+﻿<head>
+    <meta http-equiv="refresh" content="6;url=/Home/Index" />
+</head>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="message-box _success">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <h2> Your Reservation was successful </h2>
+                <p>
+                    Thank you for your Reservation Patient:@Model.PatientName <br>
+                    Your reservation id is: @Model.Id
+                    at: @Model.AppointmentDate
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<div class="toast position-fixed bottom-0 end-0 p-3" style="width:400px;background-color:#fff;opacity:1" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="toast-header">
+        <strong class="me-auto">successful Reservation</strong>
+        <small>1 second ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        You Will be Redirect to The Home Page in few seconds
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const toastElList = document.querySelectorAll('.toast');
+        const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl));
+        toastList.forEach(toast => toast.show());
+    });
+</script>

@@ -1,0 +1,16 @@
+﻿<h2>Complete Appointment with @Model.Name</h2>
+<br />
+<form id="CompleteAppointment" method="post" action="/Doctors/CompleteAppointment">
+
+    <label for="PatientName">Patient Name:</label>
+    <input class="form-control" id="PatientName" type="text" name="PatientName" placeholder="Name" aria-label="default input example" required>
+
+    <label for="AppointmentDate">Appointment Date:</label>
+    <input class="form-control" id="AppointmentDate" name="AppointmentDate" type="date" placeholder="Default input" aria-label="default input example" required>
+
+    <label for="AppointmentTime">Appointment Time:</label>
+    <input class="form-control" id="AppointmentTime" name="AppointmentTime" type="time" placeholder="Default input" aria-label="default input example" required>
+    <input type="hidden" value="@Model.Id" name="DoctorId" id="DoctorId" />
+<br />
+<button  class="btn btn-primary"> Complete Appointment</button>
+</form>
